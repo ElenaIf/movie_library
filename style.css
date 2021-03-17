@@ -13,22 +13,6 @@ a {
   color: black;
 }
 
-#hero-banner {
-  height: 60vh;
-  width: 100%;
-}
-
-.banner-comedy {
-  background-image: url("categories pictures/pexels-helena-lopes-708440.jpg");
-}
-
-.banner-thriller {
-  background-image: url("categories pictures/pexels-andreas-4483237.jpg");
-}
-/* .banner-action
-.banner-drama
-.banner-fantasy */
-
 .container {
   margin-left: 13rem;
   max-width: 75rem;
@@ -135,41 +119,6 @@ a {
 .onSofa img {
   margin-left: 19rem;
   width: 60%;
-}
-
-/********************* example for dispalying genre type **********************/
-#comedy-movies {
-  display: flex;
-  flex-wrap: wrap;
-}
-.movie {
-  width: 300px;
-  height: 300px;
-  background-color: black;
-  border-radius: 3px;
-  overflow: hidden;
-  position: relative;
-  margin: 1rem;
-}
-
-.movie img {
-  height: 250px;
-  width: 280px;
-}
-
-.movie-title {
-  color: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 0.5rem 1rem 1rem;
-  letter-spacing: 0.5px;
-}
-
-.movie-title h3 {
-  font-size: 1rem;
-  margin: 0;
 }
 
 /****** INDIVIDUAL MOVIE PAGE ******/
