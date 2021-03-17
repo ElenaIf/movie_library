@@ -54,6 +54,11 @@ main {
   border-radius: 10px;
 }
 
+.categoryButton a {
+  color: white;
+  text-decoration: none;
+}
+
 #comedyButton {
   grid-area: a;
 }
