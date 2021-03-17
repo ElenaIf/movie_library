@@ -1,54 +1,67 @@
 #hero-banner {
-  height: 45vh;
+  height: 50vh;
   width: 100%;
-  position: fixed;
-  top: 110px;
+  /* position: fixed;
+  top: 110px; */
   z-index: 100;
 }
 
 .banner-comedy {
   background: url("categories pictures/pexels-helena-lopes-708440.jpg")
-    no-repeat fixed center center/cover;
+    no-repeat;
+  background-size: 100% 100%;
 }
 .banner-thriller {
   background: url("categories pictures/pexels-andreas-4483237.jpg") no-repeat
     fixed center center/cover;
 }
 
-/* .banner-action
-.banner-drama
-.banner-fantasy */
+.banner-action {
+  background: url("categories pictures/cropped action.jpg") no-repeat center;
+  background-size: contain;
+  background-color: white;
+}
+
+.banner-drama {
+  background: url("categories pictures/cropped drama.jpg") no-repeat fixed
+    center center/cover;
+}
+
+.banner-fantasy {
+  background: url("categories pictures/cropped fantasy.jpg") no-repeat fixed
+    center center/cover;
+}
 
 #comedy-movies {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60vh;
+  margin-top: 10vh;
   justify-content: center;
 }
 #action-movies {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60vh;
+  margin-top: 10vh;
   justify-content: center;
 }
 
 #drama-movies {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60vh;
+  margin-top: 10vh;
   justify-content: center;
 }
 
 #fantasy-movies {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60vh;
+  margin-top: 10vh;
   justify-content: center;
 }
 #thriller-movies {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60vh;
+  margin-top: 10vh;
   justify-content: center;
 }
 
