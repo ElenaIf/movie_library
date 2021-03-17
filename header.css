@@ -1,0 +1,45 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  padding: 0.5rem;
+  transition: 0.2s;
+}
+
+.logo {
+  font-family: "Arya", cursive;
+  font-size: 2rem;
+}
+
+.logobottom {
+  font-family: "Montserrat", sans-serif;
+}
+
+input {
+  width: 15rem;
+  padding: 0.5rem;
+  outline-style: solid;
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: "Raleway", sans-serif;
+}
+
+.logo-name {
+  margin: 1rem;
+  flex: 1;
+  text-align: right;
+}
+
+.movie-search {
+  margin: 1rem 2rem;
+  flex: 1;
+  text-align: right;
+}
+
+.back-to-menu {
+  margin-bottom: 1rem;
+}

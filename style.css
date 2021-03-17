@@ -7,40 +7,10 @@ body {
   background-color: rgb(19, 18, 18);
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  background-color: white;
-  width: 100%;
-  padding: 0.5rem;
-  transition: 0.2s;
-}
-
 a {
   text-decoration: none;
   background-color: white;
   color: black;
-}
-
-.logo {
-  font-family: "Arya", cursive;
-  font-size: 2rem;
-}
-
-.logobottom {
-  font-family: "Montserrat", sans-serif;
-}
-
-input {
-  width: 15rem;
-  padding: 0.5rem;
-  outline-style: solid;
-  border-radius: 5px;
-  font-size: 13px;
-  font-family: "Raleway", sans-serif;
 }
 
 #hero-banner {
@@ -204,26 +174,10 @@ input {
 
 /****** INDIVIDUAL MOVIE PAGE ******/
 
-.logo-name {
-  margin: 1rem;
-  flex: 1;
-  text-align: right;
-}
-
-.movie-search {
-  margin: 1rem 2rem;
-  flex: 1;
-  text-align: right;
-}
-
 .movie-top {
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-.back-to-menu {
-  margin-bottom: 1rem;
 }
 
 #movie_name_individual_page {
