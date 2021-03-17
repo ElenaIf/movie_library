@@ -12,10 +12,15 @@ a {
   background-color: white;
   color: black;
 }
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
 .container {
-  margin-left: 13rem;
-  max-width: 75rem;
+  max-width: 70vw;
   margin-top: 10%;
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
@@ -28,19 +33,18 @@ a {
     "a a g g b b"
     "h h c c i i"
     "d d j j e e"
-    "k f f f f l";
+    "k k f f l l";
   grid-gap: 2rem;
 }
 
 .categoryButton {
-  width: 40%;
+  width: 100%;
   background-color: black;
   color: white;
   box-shadow: 1px 10px 20px white;
   border-radius: 5px;
   border-width: 1px;
   padding: 0.9rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +77,6 @@ a {
 
 #moodButton {
   grid-area: f;
-  margin-left: 10rem;
   margin-bottom: 1rem;
   box-shadow: none;
   background-color: rgb(19, 18, 18);
@@ -83,37 +86,31 @@ a {
 .blankSpace {
   grid-area: g;
   background-color: transparent;
-  visibility: hidden;
 }
 
 .blankSpace2 {
   grid-area: h;
   background-color: transparent;
-  visibility: hidden;
 }
 
 .blankSpace3 {
   grid-area: i;
   background-color: transparent;
-  visibility: hidden;
 }
 
 .blankSpace4 {
   grid-area: j;
   background-color: transparent;
-  visibility: hidden;
 }
 
 .blankSpace5 {
   grid-area: k;
   background-color: transparent;
-  visibility: hidden;
 }
 
 .blankSpace6 {
   grid-area: l;
   background-color: transparent;
-  visibility: hidden;
 }
 
 .onSofa img {
@@ -121,61 +118,6 @@ a {
   width: 60%;
 }
 
-<<<<<<< HEAD
-/********************* example for dispalying genre type **********************/
-/* #comedy-movies {
-  display: flex;
-  flex-wrap: wrap;
-}
-.movie {
-  width: 300px;
-  height: 300px;
-  background-color: black;
-  border-radius: 3px;
-  overflow: hidden;
-  position: relative;
-  margin: 1rem;
-}
-
-.movie img {
-  height: 250px;
-  width: 280px;
-}
-
-.movie-title {
-  color: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 0.5rem 1rem 1rem;
-  letter-spacing: 0.5px;
-}
-
-.movie-title h3 {
-  font-size: 1rem;
-  margin: 0;
-} */
-
-/* footer */
-
-footer {
-  /* position: relative; */
-  min-height: 10rem;
-  width: 100%;
-  color: white;
-  background-color: #031d44;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  font-family: "Montserrat", sans-serif;
-}
-
-=======
->>>>>>> e4c2837fe51363558ec157191d1062297892cfce
 /****** INDIVIDUAL MOVIE PAGE ******/
 
 .movie-top {
