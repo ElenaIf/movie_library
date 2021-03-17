@@ -13,6 +13,7 @@ const apiKey = "6c4e73bcf355ac113f00af4502b19d6b";
  genere_id = 14 genere_name: fantasty
 
 */
+
 function callingComedies() {
   const genre_id = "35";
 
@@ -46,7 +47,7 @@ function callingComedies() {
             <div class="movie-title">
                 <h3>${title}</h3>
             </div>
-           
+
         `;
 
       main.appendChild(movieElement);
@@ -55,6 +56,10 @@ function callingComedies() {
   getMovies();
 }
 callingComedies();
+
+const comedyBtn = document.querySelector(".categoryButton");
+
+comedyBtn.addEventListener("click", callingComedies);
 
 function callingDramas() {
   const genre_id = "18";
@@ -89,7 +94,7 @@ function callingDramas() {
               <div class="movie-title">
                   <h3>${title}</h3>
               </div>
-             
+
           `;
 
       main.appendChild(movieElement);
@@ -132,7 +137,7 @@ function callingThrillers() {
               <div class="movie-title">
                   <h3>${title}</h3>
               </div>
-             
+
           `;
 
       main.appendChild(movieElement);
@@ -175,7 +180,7 @@ function callingActions() {
               <div class="movie-title">
                   <h3>${title}</h3>
               </div>
-             
+
           `;
 
       main.appendChild(movieElement);
@@ -218,7 +223,7 @@ function callingFantasy() {
               <div class="movie-title">
                   <h3>${title}</h3>
               </div>
-             
+
           `;
 
       main.appendChild(movieElement);
