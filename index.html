@@ -32,62 +32,38 @@
 
       <div class="movie-search">
         <form>
-          <input
-            type="search"
-            id="search"
-            name="search"
-            placeholder="Search for movie"
-          />
+          <input type="search" id="search" name="search" placeholder="Search for movie" />
           <!-- button-icon of searching -->
         </form>
       </div>
     </header>
     <main>
       <div class="container">
-        <div class="movieGrid">
-          <a href="COMEDY.html"
-            ><div class="categoryButton" id="comedyButton">COMEDY</div></a
-          >
-          <a href="DRAMA.html"
-            ><div class="categoryButton" id="dramaButton">DRAMA</div></a
-          >
-          <a href="ACTION.html"
-            ><div class="categoryButton" id="actionButton">ACTION</div></a
-          >
-          <a href="THRILLER.html"
-            ><div class="categoryButton" id="thrillerButton">THRILLER</div></a
-          >
-          <a href="FANTASY.html"
-            ><div class="categoryButton" id="fantasyButton">FANTASY</div></a
-          >
+        <div class="movie-categories-with-sofa">
+          <div class="movieGrid">
+            <div class="categoryButton" id="comedyButton"><a href="COMEDY.html">COMEDY</a></div>
+            <div class="categoryButton" id="dramaButton"><a href="DRAMA.html">DRAMA</a></div>
+            <div class="categoryButton" id="actionButton"><a href="ACTION.html">ACTION</a></div>
+            <div class="categoryButton" id="thrillerButton">
+              <a href="THRILLER.html">THRILLER</a>
+            </div>
+            <div class="categoryButton" id="fantasyButton"><a href="FANTASY.html">FANTASY</a></div>
+          </div>
 
-          <div class="categoryButton" id="moodButton">
+          <div id="moodButton">
             <h3>WHAT IS YOUR MOOD TODAY?</h3>
           </div>
 
-          <div class="blankButton blankSpace"></div>
-          <div class="blankButton blankSpace2"></div>
-          <div class="blankButton blankSpace3"></div>
-          <div class="blankButton blankSpace4"></div>
-          <div class="blankButton blankSpace5"></div>
-          <div class="blankButton blankSpace6"></div>
-        </div>
-
-        <div class="onSofa">
-          <img
-            src="verne-ho-BTfDOQLPHlc-unsplash.png"
-            alt="Guy laying on a sofa"
-          />
+          <div class="onSofa">
+            <img src="verne-ho-BTfDOQLPHlc-unsplash.png" alt="Guy laying on a sofa" />
+          </div>
         </div>
       </div>
     </main>
     <footer>
       <p>Movie Library Project © Copyright 2021</p>
-      <p>
-        Participants: Aryal Sagar, Haavisto Heli, Ivankina Elena, Ubozhenko
-        Iolanta
-      </p>
+      <p>Participants: Aryal Sagar, Haavisto Heli, Ivankina Elena, Ubozhenko Iolanta</p>
     </footer>
-    <!-- <script src="categories.js"></script> -->
+    <script src="categories.js"></script>
   </body>
 </html>

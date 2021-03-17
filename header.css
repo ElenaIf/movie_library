@@ -9,6 +9,7 @@ header {
   padding: 0.5rem;
   transition: 0.2s;
   z-index: 100;
+  color: black;
 }
 
 .back-to-menu {
@@ -29,10 +30,22 @@ header {
 .logo {
   font-family: "Arya", cursive;
   font-size: 2rem;
+  color: black;
+}
+
+.logo a {
+  font-family: "Arya", cursive;
+  font-size: 2rem;
+  color: black;
 }
 
 .logobottom {
   font-family: "Montserrat", sans-serif;
+}
+
+.logobottom a {
+  font-family: "Montserrat", sans-serif;
+  color: black;
 }
 
 input {
@@ -44,10 +57,21 @@ input {
   font-family: "Raleway", sans-serif;
 }
 
+.movie-search input {
+  width: 15rem;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: "Raleway", sans-serif;
+  border: solid 1 px #333;
+}
+
 .logo-name {
   margin: 1rem;
   flex: 1;
   text-align: center;
+  color: black;
 }
 
 .movie-search {
