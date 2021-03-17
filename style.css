@@ -6,12 +6,6 @@ html {
   color: white;
 }
 
-/* a {
-  text-decoration: none;
-  background-color: white;
-  color: black;
-} */
-
 main {
   display: flex;
   justify-content: center;
