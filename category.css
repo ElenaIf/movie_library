@@ -1,0 +1,87 @@
+#hero-banner {
+  height: 45vh;
+  width: 100%;
+  position: fixed;
+  top: 110px;
+  z-index: 100;
+}
+
+.banner-comedy {
+  background: url("categories pictures/pexels-helena-lopes-708440.jpg")
+    no-repeat fixed center center/cover;
+}
+.banner-thriller {
+  background: url("categories pictures/pexels-andreas-4483237.jpg") no-repeat
+    fixed center center/cover;
+}
+
+/* .banner-action
+.banner-drama
+.banner-fantasy */
+
+#comedy-movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60vh;
+  justify-content: center;
+}
+#action-movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60vh;
+  justify-content: center;
+}
+
+#drama-movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60vh;
+  justify-content: center;
+}
+
+#fantasy-movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60vh;
+  justify-content: center;
+}
+#thriller-movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60vh;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+}
+
+.movie:hover {
+  transform: scale(1.2);
+}
+
+.movie img {
+  height: 250px;
+  width: 280px;
+}
+
+.movie-title {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-title h3 {
+  font-size: 1rem;
+  margin: 0;
+}
