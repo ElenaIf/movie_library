@@ -121,61 +121,6 @@ a {
   width: 60%;
 }
 
-<<<<<<< HEAD
-/********************* example for dispalying genre type **********************/
-/* #comedy-movies {
-  display: flex;
-  flex-wrap: wrap;
-}
-.movie {
-  width: 300px;
-  height: 300px;
-  background-color: black;
-  border-radius: 3px;
-  overflow: hidden;
-  position: relative;
-  margin: 1rem;
-}
-
-.movie img {
-  height: 250px;
-  width: 280px;
-}
-
-.movie-title {
-  color: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 0.5rem 1rem 1rem;
-  letter-spacing: 0.5px;
-}
-
-.movie-title h3 {
-  font-size: 1rem;
-  margin: 0;
-} */
-
-/* footer */
-
-footer {
-  /* position: relative; */
-  min-height: 10rem;
-  width: 100%;
-  color: white;
-  background-color: #031d44;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  font-family: "Montserrat", sans-serif;
-}
-
-=======
->>>>>>> e4c2837fe51363558ec157191d1062297892cfce
 /****** INDIVIDUAL MOVIE PAGE ******/
 
 .movie-top {
