@@ -1,54 +1,62 @@
 * {
   margin: 0;
+}
+
+html {
   color: white;
 }
 
-body {
-  background-color: rgb(19, 18, 18);
-}
-
-a {
+/* a {
   text-decoration: none;
   background-color: white;
   color: black;
+} */
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(19, 18, 18);
 }
 
 .container {
-  margin-left: 13rem;
-  max-width: 75rem;
+  max-width: 70vw;
   margin-top: 10%;
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
 }
 
-.movieGrid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas:
-    "a a g g b b"
-    "h h c c i i"
-    "d d j j e e"
-    "k f f f f l";
-  grid-gap: 2rem;
-}
-
-.categoryButton {
-  width: 40%;
-  background-color: black;
-  color: white;
-  box-shadow: 1px 10px 20px white;
-  border-radius: 5px;
-  border-width: 1px;
-  padding: 0.9rem;
-
+.movie-categories-with-sofa {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.blankButton {
-  width: 100%;
-  height: 100%;
+.movieGrid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas:
+    ". a a . . b b ."
+    ". . . c c . . ."
+    "d d . . . . e e";
+  grid-gap: 2rem;
+  min-width: 70vw;
+}
+
+.categoryButton {
+  border: solid 1px white;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  box-shadow: 1px 10px 20px white;
+  border-radius: 10px;
+}
+
+.categoryButton a {
+  color: white;
+  text-decoration: none;
 }
 
 #comedyButton {
@@ -72,53 +80,14 @@ a {
 }
 
 #moodButton {
-  grid-area: f;
-  margin-left: 10rem;
-  margin-bottom: 1rem;
+  margin: 5rem;
   box-shadow: none;
   background-color: rgb(19, 18, 18);
   font-size: 1rem;
 }
 
-.blankSpace {
-  grid-area: g;
-  background-color: transparent;
-  visibility: hidden;
-}
-
-.blankSpace2 {
-  grid-area: h;
-  background-color: transparent;
-  visibility: hidden;
-}
-
-.blankSpace3 {
-  grid-area: i;
-  background-color: transparent;
-  visibility: hidden;
-}
-
-.blankSpace4 {
-  grid-area: j;
-  background-color: transparent;
-  visibility: hidden;
-}
-
-.blankSpace5 {
-  grid-area: k;
-  background-color: transparent;
-  visibility: hidden;
-}
-
-.blankSpace6 {
-  grid-area: l;
-  background-color: transparent;
-  visibility: hidden;
-}
-
 .onSofa img {
-  margin-left: 19rem;
-  width: 60%;
+  max-width: 1000px;
 }
 
 /****** INDIVIDUAL MOVIE PAGE ******/

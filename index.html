@@ -14,19 +14,22 @@
       href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="category.css" />
+    <!-- <link rel="stylesheet" href="cate" /> -->
     <title>Landing Page Movie Library</title>
   </head>
   <body>
-    <script src="categories.js"></script>
     <header>
+      <div class="back-to-menu"></div>
+
       <div class="logo-name">
         <h1 class="logo"><a href="index.html">Movie</a></h1>
         <p class="logobottom"><a href="index.html">LIBRARY</a></p>
       </div>
+
       <div class="movie-search">
         <form>
           <input type="search" id="search" name="search" placeholder="Search for movie" />
@@ -34,36 +37,33 @@
         </form>
       </div>
     </header>
-
     <main>
       <div class="container">
-        <div class="movieGrid">
-          <a href="COMEDY.html"><div class="categoryButton" id="comedyButton">COMEDY</div></a>
-          <a href="DRAMA.html"><div class="categoryButton" id="dramaButton">DRAMA</div></a>
-          <a href="ACTION.html"></a><div class="categoryButton" id="actionButton">ACTION</div>></a>
-          <a href="THRILLER.html"><div class="categoryButton" id="thrillerButton">THRILLER</div></a>
-          <a href="FANTASY.html"><div class="categoryButton" id="fantasyButton">FANTASY</div></a>
-    
-          <div class="categoryButton" id="moodButton">
+        <div class="movie-categories-with-sofa">
+          <div class="movieGrid">
+            <div class="categoryButton" id="comedyButton"><a href="COMEDY.html">COMEDY</a></div>
+            <div class="categoryButton" id="dramaButton"><a href="DRAMA.html">DRAMA</a></div>
+            <div class="categoryButton" id="actionButton"><a href="ACTION.html">ACTION</a></div>
+            <div class="categoryButton" id="thrillerButton">
+              <a href="THRILLER.html">THRILLER</a>
+            </div>
+            <div class="categoryButton" id="fantasyButton"><a href="FANTASY.html">FANTASY</a></div>
+          </div>
+
+          <div id="moodButton">
             <h3>WHAT IS YOUR MOOD TODAY?</h3>
           </div>
 
-          <div class="blankButton" class="blankSpace"></div>
-          <div class="blankButton" class="blankSpace2"></div>
-          <div class="blankButton" class="blankSpace3"></div>
-          <div class="blankButton" class="blankSpace4"></div>
-          <div class="blankButton" class="blankSpace5"></div>
-          <div class="blankButton" class="blankSpace6"></div>
+          <div class="onSofa">
+            <img src="verne-ho-BTfDOQLPHlc-unsplash.png" alt="Guy laying on a sofa" />
+          </div>
         </div>
-      </div>
-
-      <div class="onSofa">
-        <img src="verne-ho-BTfDOQLPHlc-unsplash.png" alt="Guy laying on a sofa" />
       </div>
     </main>
     <footer>
       <p>Movie Library Project © Copyright 2021</p>
       <p>Participants: Aryal Sagar, Haavisto Heli, Ivankina Elena, Ubozhenko Iolanta</p>
     </footer>
- c  c  </body>
+    <script src="categories.js"></script>
+  </body>
 </html>
