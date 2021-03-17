@@ -11,6 +11,21 @@ header {
   z-index: 100;
 }
 
+.back-to-menu {
+  flex: 1;
+  width: 70vw;
+  margin-bottom: 1rem;
+  display: flex;
+  padding: 1rem;
+  color: black;
+}
+
+.back-to-menu a {
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: underline;
+}
+
 .logo {
   font-family: "Arya", cursive;
   font-size: 2rem;
@@ -32,15 +47,11 @@ input {
 .logo-name {
   margin: 1rem;
   flex: 1;
-  text-align: right;
+  text-align: center;
 }
 
 .movie-search {
   margin: 1rem 2rem;
   flex: 1;
   text-align: right;
-}
-
-.back-to-menu {
-  margin-bottom: 1rem;
 }
