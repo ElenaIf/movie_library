@@ -48,9 +48,9 @@ input {
   width: 100%;
 }
 
-.banner-comedy {
+/* .banner-comedy {
   background-image: url("categories pictures/pexels-helena-lopes-708440.jpg");
-}
+} */
 
 .banner-thriller {
   background-image: url("categories pictures/pexels-andreas-4483237.jpg");
@@ -168,7 +168,7 @@ input {
 }
 
 /********************* example for dispalying genre type **********************/
-#comedy-movies {
+/* #comedy-movies {
   display: flex;
   flex-wrap: wrap;
 }
@@ -200,7 +200,7 @@ input {
 .movie-title h3 {
   font-size: 1rem;
   margin: 0;
-}
+} */
 
 /* footer */
 
