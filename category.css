@@ -23,7 +23,35 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 60vh;
+  justify-content: center;
 }
+#action-movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60vh;
+  justify-content: center;
+}
+
+#drama-movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60vh;
+  justify-content: center;
+}
+
+#fantasy-movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60vh;
+  justify-content: center;
+}
+#thriller-movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60vh;
+  justify-content: center;
+}
+
 .movie {
   width: 300px;
   height: 300px;
@@ -32,6 +60,10 @@
   overflow: hidden;
   position: relative;
   margin: 1rem;
+}
+
+.movie:hover {
+  transform: scale(1.2);
 }
 
 .movie img {
