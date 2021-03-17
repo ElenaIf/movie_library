@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/3bc313c99f.js" crossorigin="anonymous"></script>
     <title>Movie Library</title>
   </head>
   <body>
@@ -23,46 +24,42 @@
         <h1 class="logo"><a href="index.html">Movie</a></h1>
         <p class="logobottom"><a href="index.html">LIBRARY</a></p>
       </div>
-      <form action="">
-        <input
-          type="search"
-          id="search"
-          name="search"
-          placeholder="Search for movie"
-        />
-        <!-- button-icon of searching -->
-      </form>
+      <div class="movie-search">
+        <form>
+          <input type="search" id="search" name="search" placeholder="Search for movie" />
+          <!-- button-icon of searching -->
+        </form>
+      </div>
     </header>
-    <main>
-      <div>
-        <p class="back-to-menu">Back to menu</p>
-        <h1 id="movie_name_individual_page">Placeholder Movie name</h1>
-      </div>
-      <div>
-        <!-- Div for the movie information -->
-        <div id="movie_poster"></div>
-        <div>
-          <h2>Info</h2>
 
-          <h3>Duration</h3>
-          <p id="duration">Placeholder for duration</p>
-          <h3>Description</h3>
-          <p id="description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime,
-            molestiae hic mollitia iure et ipsum impedit consequuntur minus
-            explicabo provident quae ad totam expedita ullam, voluptatibus
-            quaerat, fugiat vel sit?
-          </p>
+    <main>
+      <div class="container">
+        <div class="movie-top">
+          <p class="back-to-menu"><i class="fas fa-arrow-left"></i> Back to menu</p>
+          <h1 id="movie_name_individual_page">Movie name</h1>
         </div>
+        <div class="movie-info-individual">
+          <!-- Div for the movie information -->
+          <div id="movie_poster"></div>
+          <div class="movie-info-box">
+            <h2>Info</h2>
+
+            <h3>Duration</h3>
+            <p id="duration">2 hours 23 minutes</p>
+            <h3>Description</h3>
+            <p id="description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, molestiae hic
+              mollitia iure et ipsum impedit consequuntur minus explicabo provident quae ad totam
+              expedita ullam, voluptatibus quaerat, fugiat vel sit?
+            </p>
+          </div>
+        </div>
+        <div id="trailer">Placeholder for trailer</div>
       </div>
-      <div id="trailer">Placeholder for trailer</div>
     </main>
     <footer>
       <p>Movie Library Project © Copyright 2021</p>
-      <p>
-        Participants: Aryal Sagar, Haavisto Heli, Ivankina Elena, Ubozhenko
-        Iolanta
-      </p>
+      <p>Participants: Aryal Sagar, Haavisto Heli, Ivankina Elena, Ubozhenko Iolanta</p>
     </footer>
   </body>
 </html>

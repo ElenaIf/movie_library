@@ -1,15 +1,16 @@
 * {
   margin: 0;
-
   color: white;
 }
 
 body {
   background-color: rgb(19, 18, 18);
 }
+
 header {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   background-color: white;
@@ -17,6 +18,7 @@ header {
   padding: 0.5rem;
   transition: 0.2s;
 }
+
 a {
   text-decoration: none;
   background-color: white;
@@ -49,6 +51,7 @@ input {
 .banner-comedy {
   background-image: url("categories pictures/pexels-helena-lopes-708440.jpg");
 }
+
 .banner-thriller {
   background-image: url("categories pictures/pexels-andreas-4483237.jpg");
 }
@@ -74,6 +77,7 @@ input {
     "k f f f f l";
   grid-gap: 2rem;
 }
+
 .categoryButton {
   width: 40%;
   background-color: black;
@@ -115,7 +119,6 @@ input {
 
 #moodButton {
   grid-area: f;
-
   margin-left: 10rem;
   margin-bottom: 1rem;
   box-shadow: none;
@@ -131,35 +134,30 @@ input {
 
 .blankSpace2 {
   grid-area: h;
-
   background-color: transparent;
-
   visibility: hidden;
 }
+
 .blankSpace3 {
   grid-area: i;
-
   background-color: transparent;
-
   visibility: hidden;
 }
+
 .blankSpace4 {
   grid-area: j;
-
   background-color: transparent;
-
   visibility: hidden;
 }
+
 .blankSpace5 {
   grid-area: k;
-
   background-color: transparent;
-
   visibility: hidden;
 }
+
 .blankSpace6 {
   grid-area: l;
-
   background-color: transparent;
   visibility: hidden;
 }
@@ -207,8 +205,8 @@ input {
 /* footer */
 
 footer {
-  position: relative;
-  height: 100%;
+  /* position: relative; */
+  min-height: 10rem;
   width: 100%;
   color: white;
   background-color: #031d44;
@@ -219,4 +217,80 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   font-family: "Montserrat", sans-serif;
+}
+
+/****** INDIVIDUAL MOVIE PAGE ******/
+
+.logo-name {
+  margin: 1rem;
+  flex: 1;
+  text-align: right;
+}
+
+.movie-search {
+  margin: 1rem 2rem;
+  flex: 1;
+  text-align: right;
+}
+
+.movie-top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.back-to-menu {
+  margin-bottom: 1rem;
+}
+
+#movie_name_individual_page {
+  margin-top: 1rem;
+}
+
+.movie-info-individual {
+  min-height: 40vh;
+  border: solid 1px white;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-info-box {
+  margin: 1rem;
+}
+
+.movie-info-box h2 {
+  margin-bottom: 1rem;
+}
+
+#duration {
+  margin-bottom: 1rem;
+}
+
+#description {
+  margin-bottom: 1rem;
+}
+
+.movie-info-box h3 {
+  margin-bottom: 1rem;
+}
+
+#movie_poster {
+  min-height: 10rem;
+  min-width: 20rem;
+  background-color: #333;
+  margin: 1rem;
+}
+
+#trailer {
+  min-height: 30vh;
+  border: solid 1px white;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 4rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
