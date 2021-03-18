@@ -20,8 +20,7 @@ async function getMovies(url) {
 
 function showMovies(movies) {
   movies.forEach((movie) => {
-
-    const { poster_path, title, vote_average, overview } = movie;
+    const { poster_path, title, id, vote_average, overview } = movie;
 
     const movieEl = document.createElement("div");
     movieEl.classList.add("movie");
@@ -29,7 +28,7 @@ function showMovies(movies) {
     movieEl.innerHTML = `
             <img
                 src="${imgPath + poster_path}"
-                alt="${title}"
+                alt="${id}"
             />
             <div class="movie-info">
                 <h3>${title}</h3>
@@ -57,25 +56,6 @@ function getClassByRate(vote) {
   }
 }
 
-    const { poster_path, id, title } = movie;
-
-    const movieElement = document.createElement("div");
-    movieElement.classList.add("movie");
-
-    movieElement.innerHTML = `
-              <img
-                  src="${imgPath + poster_path}"
-                  alt="${id}"
-              />
-              <div class="movie-title">
-                  <h3>${title}</h3>
-              </div>
-
-          `;
-
-    main.appendChild(movieElement);
-  });
-}
 getMovies();
 
 // Displaying each movie in details
@@ -95,4 +75,3 @@ document.onclick = function (event) {
       console.log(urlData.overview);
     });
 };
-
