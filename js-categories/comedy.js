@@ -9,8 +9,8 @@ const main = document.getElementById("library");
 
 getMovies(genreURL);
 
-async function getMovies(url) {
-  const resp = await fetch(url);
+async function getMovies() {
+  const resp = await fetch(genreURL);
   const respData = await resp.json();
 
   console.log(respData);
@@ -61,11 +61,23 @@ getMovies();
 document.onclick = function (event) {
   const movie_id = event.target.alt;
   console.log(movie_id);
+
   const movieURL = `https://api.themoviedb.org/3/movie/${movie_id}?&api_key=${apiKey}&language=en-US&include_adult=false&sort_by=created_at.asc&query`;
+
 
   fetch(movieURL)
     .then((res) => res.json())
     .then((urlData) => {
+      const popWindow = document.createElement("div");
+      popWindow.innerHTML = `<div class="modal-bg">
+      //       <div class="modal">
+      //         <img src="${urlData.poster_path}" alt="" />
+      //         <h2>${urlData.title}</h2>
+      //         <p class="date">${urlData.release_date}</p>
+      //         <p class="description">${urlData.overview}</p>
+      //         <span class="modal-close">X</span>
+      //       </div>
+      //     </div>`;
       console.log(urlData.poster_path);
       console.log(urlData.title);
       console.log(urlData.release_date);
@@ -73,3 +85,33 @@ document.onclick = function (event) {
       console.log(urlData.overview);
     });
 };
+
+/****** INNER HTML MODAL STRUCTURE **********/
+// innerHTML = `<div class="modal-bg">
+//       <div class="modal">
+//         <img src="${urlData.poster_path}" alt="" />
+//         <h2>${urlData.title}</h2>
+//         <p class="date">${urlData.release_date}</p>
+//         <p class="description">${urlData.overview}</p>
+//         <span class="modal-close">X</span>
+//       </div>
+//     </div>`;
+
+/******* BASIC FUNCTION TO SWITCH ON/OFF MODAL **********/
+// let modalBtn = document.querySelector;
+// let modalBg = document.querySelector(".modal-bg");
+// let modelClose = document.querySelector(".modal-close");
+
+// modalBtn.addEventListener("click", function () {
+//   modalBg.classList.add("bg-active");
+// });
+// modelClose.addEventListener("click", function () {
+//   modalBg.classList.remove("bg-active");
+// });
+
+/******  CHEKING IF EVENTLISTENER WORKS *********/
+// let clicked = document
+//   .querySelector("#library")
+//   .addEventListener("click", function () {
+//     console.log("clicked");
+//   });
