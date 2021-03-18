@@ -55,6 +55,12 @@ input {
   border-radius: 5px;
   font-size: 13px;
   font-family: "Raleway", sans-serif;
+  z-index: 100;
+  color: black;
+}
+
+i {
+  color: black;
 }
 
 .movie-search input {

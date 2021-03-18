@@ -65,6 +65,13 @@
   justify-content: center;
 }
 
+#search-movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10vh;
+  justify-content: center;
+}
+
 .movie {
   width: 300px;
   height: 300px;
