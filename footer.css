@@ -1,11 +1,8 @@
-/* footer */
-
 footer {
-  /* position: relative; */
-  min-height: 10rem;
+  min-height: 15rem;
   width: 100%;
   color: white;
-  background-color: #031d44;
+  background-image: linear-gradient(to bottom, rgb(22, 21, 21), rgba(134, 126, 126, 0.411));
   text-align: center;
   display: flex;
   flex-direction: column;
