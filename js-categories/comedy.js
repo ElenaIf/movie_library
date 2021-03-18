@@ -40,6 +40,44 @@ function showMovies(movies) {
 
     numberOfStars();
 
+    let star_number;
+    let vote_average_floored = Math.round(vote_average);
+
+    switch (vote_average_floored) {
+      case 1:
+        star_number = 1;
+        break;
+      case 2:
+        star_number = 2;
+        break;
+      case 3:
+        star_number = 3;
+        break;
+      case 4:
+        star_number = 4;
+        break;
+      case 5:
+        star_number = 5;
+        break;
+      case 6:
+        star_number = 6;
+        break;
+      case 7:
+        star_number = 7;
+        break;
+      case 8:
+        star_number = 8;
+        break;
+      case 9:
+        star_number = 9;
+        break;
+      case 10:
+        star_number = 10;
+        break;
+      default:
+        star_number = 1;
+    }
+
     const movieEl = document.createElement("div");
     movieEl.className = "movie";
     movieEl.id = id;
@@ -51,10 +89,9 @@ function showMovies(movies) {
             />
             <div class="movie-info">
                 <h3>${title}</h3>
-                <span class="${getClassByRate(vote_average)}">${vote_average}</span>
             </div>
             <div class="overview">
-             <p>Click on poster to read more</p>
+            <img src="/categories pictures/stars/star${star_number}.svg">
         </div>
             </div>
         `;
