@@ -9,7 +9,7 @@ header {
   padding: 0.5rem;
   transition: 0.2s;
   z-index: 100;
-  color: black;
+  /* color: black; */
 }
 
 .back-to-menu {
@@ -56,7 +56,9 @@ input {
   font-size: 13px;
   font-family: "Raleway", sans-serif;
   z-index: 100;
-  color: black;
+  /* color: black; */
+  background-color: white;
+  border: none;
 }
 
 i {
@@ -70,7 +72,7 @@ i {
   border-radius: 5px;
   font-size: 13px;
   font-family: "Raleway", sans-serif;
-  border: solid 1 px #333;
+  /* border: solid 1 px #333; */
 }
 
 .logo-name {
