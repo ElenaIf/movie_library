@@ -90,3 +90,16 @@ i {
   flex: 1;
   text-align: right;
 }
+
+.search-button {
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(19, 18, 18);
+  color: white;
+}
+
+.search-button:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 1px rgba(109, 104, 104, 0.479);
+}
