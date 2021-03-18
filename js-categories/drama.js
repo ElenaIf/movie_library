@@ -32,9 +32,7 @@ function showMovies(movies) {
             />
             <div class="movie-info">
                 <h3>${title}</h3>
-                <span class="${getClassByRate(
-                  vote_average
-                )}">${vote_average}</span>
+                <span class="${getClassByRate(vote_average)}">${vote_average}</span>
             </div>
             <div class="overview">
                 <h3>Overview:</h3>
@@ -63,7 +61,7 @@ getMovies();
 document.onclick = function (event) {
   const movie_id = event.target.alt;
   console.log(movie_id);
-  const movieURL = `http://api.themoviedb.org/3/movie/${movie_id}?&api_key=${apiKey}&language=en-US&include_adult=false&sort_by=created_at.asc&query`;
+  const movieURL = `https://api.themoviedb.org/3/movie/${movie_id}?&api_key=${apiKey}&language=en-US&include_adult=false&sort_by=created_at.asc&query`;
 
   fetch(movieURL)
     .then((res) => res.json())
