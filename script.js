@@ -18,7 +18,7 @@ const apiKey = "6c4e73bcf355ac113f00af4502b19d6b";
 
  genere_ids = 18 genere_name: drama
 
- genere_ids = 35 genere_name: action
+ genere_ids = 28 genere_name: action
 
  genere_ids = 53 genere_name: thriller
 

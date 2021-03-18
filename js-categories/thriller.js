@@ -5,23 +5,27 @@ const genreURL = `https://api.themoviedb.org/3/genre/${genre_id}/movies?&api_key
 
 const imgPath = "https://image.tmdb.org/t/p/w1280";
 
-const main = document.getElementById("thriller-movies");
+const main = document.getElementById("library");
 
-async function getMovies() {
-  const resp = await fetch(genreURL);
-  const data = await resp.json();
+getMovies(genreURL);
 
-  console.log(data);
+async function getMovies(url) {
+  const resp = await fetch(url);
+  const respData = await resp.json();
 
-  showMovies(data.results);
+  console.log(respData);
+
+  showMovies(respData.results);
 }
 
 function showMovies(movies) {
   movies.forEach((movie) => {
-    const { poster_path, id, title } = movie;
 
-    const movieElement = document.createElement("div");
-    movieElement.classList.add("movie");
+    const { poster_path, title, id, vote_average, overview } = movie;
+
+    const movieEl = document.createElement("div");
+    movieEl.classList.add("movie");
+
 
     movieElement.innerHTML = `
               <img
@@ -32,11 +36,38 @@ function showMovies(movies) {
                   <h3>${title}</h3>
               </div>
 
-          `;
 
-    main.appendChild(movieElement);
+    movieEl.innerHTML = `
+            <img
+                src="${imgPath + poster_path}"
+                alt="${id}"
+            />
+            <div class="movie-info">
+                <h3>${title}</h3>
+                <span class="${getClassByRate(
+                  vote_average
+                )}">${vote_average}</span>
+            </div>
+            <div class="overview">
+                <h3>Overview:</h3>
+                ${overview}
+            </div>
+        `;
+
+    main.appendChild(movieEl);
   });
 }
+
+function getClassByRate(vote) {
+  if (vote >= 8) {
+    return "green";
+  } else if (vote >= 5) {
+    return "orange";
+  } else {
+    return "red";
+  }
+}
+
 getMovies();
 
 // Displaying each movie in details

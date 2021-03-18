@@ -1,27 +1,29 @@
 const apiKey = "6c4e73bcf355ac113f00af4502b19d6b";
-const genre_id = "35";
+const genre_id = "28";
 
 const genreURL = `https://api.themoviedb.org/3/genre/${genre_id}/movies?&api_key=${apiKey}&language=en-US&include_adult=false&sort_by=created_at.asc&query?`;
 
 const imgPath = "https://image.tmdb.org/t/p/w1280";
 
-const main = document.getElementById("action-movies");
+const main = document.getElementById("library");
 
-async function getMovies() {
-  const resp = await fetch(genreURL);
-  const data = await resp.json();
+getMovies(genreURL);
 
-  console.log(data);
+async function getMovies(url) {
+  const resp = await fetch(url);
+  const respData = await resp.json();
 
-  showMovies(data.results);
+  console.log(respData);
+
+  showMovies(respData.results);
 }
 
 function showMovies(movies) {
   movies.forEach((movie) => {
-    const { poster_path, title, id } = movie;
+    const { poster_path, title, id, vote_average, overview } = movie;
 
-    const movieElement = document.createElement("div");
-    movieElement.classList.add("movie");
+    const movieEl = document.createElement("div");
+    movieEl.classList.add("movie");
 
     movieElement.innerHTML = `
               <img
@@ -32,19 +34,47 @@ function showMovies(movies) {
                   <h3>${title}</h3>
               </div>
 
-          `;
+    movieEl.innerHTML = `
+            <img
+                src="${imgPath + poster_path}"
+                alt="${id}"
+            />
+            <div class="movie-info">
+                <h3>${title}</h3>
+                <span class="${getClassByRate(
+                  vote_average
+                )}">${vote_average}</span>
+            </div>
+            <div class="overview">
+                <h3>Overview:</h3>
+                ${overview}
+            </div>
+        `;
 
-    main.appendChild(movieElement);
+    main.appendChild(movieEl);
   });
 }
+
+function getClassByRate(vote) {
+  if (vote >= 8) {
+    return "green";
+  } else if (vote >= 5) {
+    return "orange";
+  } else {
+    return "red";
+  }
+}
+
 getMovies();
 
 // Displaying each movie in details
+
 
 document.onclick = function (event) {
   const movie_id = event.target.alt;
   console.log(movie_id);
   const movieURL = `http://api.themoviedb.org/3/movie/${movie_id}?&api_key=${apiKey}&language=en-US&include_adult=false&sort_by=created_at.asc&query`;
+
 
   fetch(movieURL)
     .then((res) => res.json())
