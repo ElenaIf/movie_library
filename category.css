@@ -39,6 +39,10 @@
   background: url("categories pictures/cropped fantasy.jpg") no-repeat fixed center center/cover;
 }
 
+.banner-search {
+  background: url("categories pictures/search.jpg") no-repeat fixed center center/cover;
+}
+
 #library {
   display: flex;
   flex-wrap: wrap;
@@ -92,13 +96,27 @@
   color: rgb(189, 42, 42);
 }
 
+.green {
+  color: rgb(39, 189, 39);
+}
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: rgb(189, 42, 42);
+}
+
 .overview {
-  color: black;
+  content: "OOOOOOO";
+  color: white;
   font-family: "Montserrat", sans-serif;
-  background-color: rgb(233, 227, 227);
-  padding: 0.8rem;
+  font-size: 0.8rem;
+  background-color: black;
+  padding: 0 0.5rem;
   position: absolute;
-  max-height: 100%;
+  max-height: 1.8rem;
   overflow: auto;
   left: 0;
   bottom: 0;

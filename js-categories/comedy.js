@@ -11,11 +11,12 @@ getMovies(genreURL);
 function getMovies(genreURL) {
   fetch(genreURL)
     .then((response) => {
+      console.log(response);
       return response.json();
     })
     .then((response) => {
       showMovies(response.results);
-      // console.log(response);
+      console.log(response);
     });
   // const resp = await fetch(genreURL);
   // const respData = await resp.json();
@@ -26,6 +27,18 @@ function getMovies(genreURL) {
 function showMovies(movies) {
   movies.forEach((movie) => {
     const { poster_path, title, id, vote_average, overview } = movie;
+    let array_of_stars = [];
+
+    // Here I made some function to print stars based on rating, but did not like how it looks
+    const numberOfStars = () => {
+      let star = `⭐️`;
+
+      while (array_of_stars.length < Math.floor(vote_average)) {
+        array_of_stars.push(star);
+      }
+    };
+
+    numberOfStars();
 
     const movieEl = document.createElement("div");
     movieEl.className = "movie";
@@ -40,7 +53,9 @@ function showMovies(movies) {
                 <h3>${title}</h3>
                 <span class="${getClassByRate(vote_average)}">${vote_average}</span>
             </div>
-       
+            <div class="overview">
+             <p>Click on poster to read more</p>
+        </div>
             </div>
         `;
 
