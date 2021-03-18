@@ -25,15 +25,6 @@ function showMovies(movies) {
     const movieEl = document.createElement("div");
     movieEl.classList.add("movie");
 
-    movieElement.innerHTML = `
-              <img
-                  src="${imgPath + poster_path}"
-                  alt="${id}"
-              />
-              <div class="movie-title">
-                  <h3>${title}</h3>
-              </div>
-
     movieEl.innerHTML = `
             <img
                 src="${imgPath + poster_path}"
@@ -69,12 +60,10 @@ getMovies();
 
 // Displaying each movie in details
 
-
 document.onclick = function (event) {
   const movie_id = event.target.alt;
   console.log(movie_id);
   const movieURL = `http://api.themoviedb.org/3/movie/${movie_id}?&api_key=${apiKey}&language=en-US&include_adult=false&sort_by=created_at.asc&query`;
-
 
   fetch(movieURL)
     .then((res) => res.json())
