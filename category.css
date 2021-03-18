@@ -19,29 +19,24 @@
 }
 
 .banner-comedy {
-  background: url("categories pictures/pexels-helena-lopes-708440.jpg")
-    no-repeat;
-  background-size: 100% 100%;
+  background: url("categories pictures/comedy.jpeg") no-repeat fixed center center/cover;
+  /* background-size: 100% 100%; */
 }
 .banner-thriller {
-  background: url("categories pictures/pexels-andreas-4483237.jpg") no-repeat
-    fixed center center/cover;
+  background: url("categories pictures/pexels-andreas-4483237.jpg") no-repeat fixed center
+    center/cover;
 }
 
 .banner-action {
-  background: url("categories pictures/cropped action.jpg") no-repeat center;
-  background-size: contain;
-  background-color: white;
+  background: url("categories pictures/action.jpeg") no-repeat fixed center center/cover;
 }
 
 .banner-drama {
-  background: url("categories pictures/cropped drama.jpg") no-repeat fixed
-    center center/cover;
+  background: url("categories pictures/cropped drama.jpg") no-repeat fixed center center/cover;
 }
 
 .banner-fantasy {
-  background: url("categories pictures/cropped fantasy.jpg") no-repeat fixed
-    center center/cover;
+  background: url("categories pictures/cropped fantasy.jpg") no-repeat fixed center center/cover;
 }
 
 #library {
