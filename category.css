@@ -71,12 +71,14 @@
   padding: 0.5rem 1rem 1rem;
   letter-spacing: 0.5px;
   min-height: 6.6rem;
+  cursor: default;
 }
 
 .movie-info h3 {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   text-align: center;
+  cursor: default;
 }
 
 .movie-info span {
@@ -84,6 +86,7 @@
   border-radius: 3px;
   font-weight: bold;
   padding: 0.25rem 0.5rem;
+  cursor: default;
 }
 .movie-info span.green {
   color: rgb(39, 189, 39);
@@ -124,6 +127,7 @@
   right: 0;
   transform: translateY(101%);
   transition: transform 0.3s ease-in;
+  cursor: default;
 }
 
 .overview h3 {
