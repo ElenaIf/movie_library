@@ -1,16 +1,19 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   color: white;
 }
 
-/* a {
+body {
+}
+
+a {
   text-decoration: none;
-  background-color: white;
-  color: black;
-} */
+}
 
 main {
   display: flex;
