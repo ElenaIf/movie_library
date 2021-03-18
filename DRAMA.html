@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="category.css" />
+    <script src="js-categories/drama.js" defer></script>
     <title>DRAMA Page</title>
   </head>
   <body>
@@ -34,21 +35,18 @@
       <div class="movie-search">
         <form>
           <input
-            type="search"
+            type="text"
             id="search"
             name="search"
             placeholder="Search for movie"
           />
-          <!-- button-icon of searching -->
         </form>
       </div>
     </header>
     <section id="hero-banner" class="banner-drama">
       <div class="categoryName"><h1>DRAMA</h1></div>
     </section>
-    <main>
-      <div id="drama-movies"></div>
-    </main>
+    <main id="library"></main>
     <footer>
       <p>Movie Library Project © Copyright 2021</p>
       <p>
@@ -56,6 +54,5 @@
         Iolanta
       </p>
     </footer>
-    <script src="js-categories/drama.js"></script>
   </body>
 </html>
