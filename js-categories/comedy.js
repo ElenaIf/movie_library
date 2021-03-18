@@ -18,7 +18,7 @@ async function getMovies() {
 
 function showMovies(movies) {
   movies.forEach((movie) => {
-    const { poster_path, title } = movie;
+    const { poster_path, id, title } = movie;
 
     const movieElement = document.createElement("div");
     movieElement.classList.add("movie");
@@ -26,7 +26,7 @@ function showMovies(movies) {
     movieElement.innerHTML = `
             <img
                 src="${imgPath + poster_path}"
-                alt="${title}"
+                alt="${id}"
             />
             <div class="movie-title">
                 <h3>${title}</h3>
@@ -38,3 +38,21 @@ function showMovies(movies) {
   });
 }
 getMovies();
+
+// Displaying each movie in details
+
+document.onclick = function (event) {
+  const movie_id = event.target.alt;
+  console.log(movie_id);
+  const movieURL = `http://api.themoviedb.org/3/movie/${movie_id}?&api_key=${apiKey}&language=en-US&include_adult=false&sort_by=created_at.asc&query`;
+
+  fetch(movieURL)
+    .then((res) => res.json())
+    .then((urlData) => {
+      console.log(urlData.poster_path);
+      console.log(urlData.title);
+      console.log(urlData.release_date);
+      console.log(urlData.vote_average);
+      console.log(urlData.overview);
+    });
+};
