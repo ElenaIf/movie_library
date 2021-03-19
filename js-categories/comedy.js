@@ -1,11 +1,15 @@
 const apiKey = "6c4e73bcf355ac113f00af4502b19d6b";
+
 const genre_id = "35";
 
 const genreURL = `https://api.themoviedb.org/3/genre/${genre_id}/movies?&api_key=${apiKey}&language=en-US&include_adult=false&sort_by=created_at.asc&query?`;
 
 const imgPath = "https://image.tmdb.org/t/p/w1280";
+
 let popUpWindow = document.querySelector("#modal");
+
 const main = document.getElementById("library");
+
 getMovies(genreURL);
 
 function getMovies(genreURL) {
@@ -18,29 +22,14 @@ function getMovies(genreURL) {
       showMovies(response.results);
       console.log(response);
     });
-  // const resp = await fetch(genreURL);
-  // const respData = await resp.json();
-  // showMovies(respData.results);
-  // console.log(respData.results);
 }
 
 function showMovies(movies) {
   movies.forEach((movie) => {
     const { poster_path, title, id, vote_average, overview } = movie;
-    let array_of_stars = [];
-
-    // Here I made some function to print stars based on rating, but did not like how it looks
-    const numberOfStars = () => {
-      let star = `⭐️`;
-
-      while (array_of_stars.length < Math.floor(vote_average)) {
-        array_of_stars.push(star);
-      }
-    };
-
-    numberOfStars();
 
     let star_number;
+
     let vote_average_floored = Math.floor(vote_average);
 
     switch (vote_average_floored) {
@@ -79,8 +68,11 @@ function showMovies(movies) {
     }
 
     const movieEl = document.createElement("div");
+
     movieEl.className = "movie";
+
     movieEl.id = id;
+
     movieEl.innerHTML = `
     <div>
             <img
@@ -103,9 +95,9 @@ function showMovies(movies) {
   document.querySelectorAll(".movie > div").forEach((movieElement) => {
     movieElement.addEventListener("click", function (event) {
       const movie_id = event.target.alt;
-      // console.log(movie_id);
 
       const movieURL = `https://api.themoviedb.org/3/movie/${movie_id}?&api_key=${apiKey}&language=en-US&include_adult=false&sort_by=created_at.asc&query`;
+
       fetch(movieURL)
         .then((res) => res.json())
         .then((urlData) => {
@@ -120,14 +112,7 @@ function showMovies(movies) {
           </div>
           </div>
             `;
-          // console.log(urlData.poster_path);
-          // console.log(urlData.title);
-          // console.log(urlData.release_date);
-          // console.log(urlData.vote_average);
-          // console.log(urlData.overview);
         });
-      // console.log("hello");
-      // console.log(movieElement);
 
       popUpWindow.classList.toggle("modal-hidden");
     });
@@ -147,77 +132,3 @@ function getClassByRate(vote) {
     return "red";
   }
 }
-
-// Displaying each movie in details
-
-// function PrintInPopUp(event) {
-//   const movie_id = event.target.alt;
-//   console.log(movie_id);
-
-//   const movieURL = `https://api.themoviedb.org/3/movie/${movie_id}?&api_key=${apiKey}&language=en-US&include_adult=false&sort_by=created_at.asc&query`;
-
-//   fetch(movieURL)
-//     .then((res) => res.json())
-//     .then((urlData) => {
-//       const popWindow = document.createElement("div");
-//       popWindow.innerHTML = `<div class="modal-bg">
-//            <div class="modal">
-//               <img src="${urlData.poster_path}" alt="" />
-//               <h2>${urlData.title}</h2>
-//               <p class="date">${urlData.release_date}</p>
-//               <p class="description">${urlData.overview}</p>
-//               <span class="modal-close">X</span>
-//             </div>
-//            </div>`;
-//       console.log(urlData.poster_path);
-//       console.log(urlData.title);
-//       console.log(urlData.release_date);
-//       console.log(urlData.vote_average);
-//       console.log(urlData.overview);
-//     });
-// }
-
-// document.querySelectorAll(".movie").forEach((el) => {
-//   el.addEventListener("click", function () {
-//     let numberPressed = this.innerHTML;
-//     console.log("This is pressed movie" + numberPressed);
-//     console.log("Hello from here!");
-//   });
-// });
-
-/****** INNER HTML MODAL STRUCTURE **********/
-// innerHTML = `<div class="modal-bg">
-//        <div class="modal">
-//         <img src="${urlData.poster_path}" alt="" />
-//          <h2>${urlData.title}</h2>
-//          <p class="date">${urlData.release_date}</p>
-//         <p class="description">${urlData.overview}</p>
-//          <span class="modal-close">X</span>
-//        </div>
-//      </div>`;
-
-/******* BASIC FUNCTION TO SWITCH ON/OFF MODAL **********/
-// let modalBtn = document.querySelector;
-// let modalBg = document.querySelector(".modal-bg");
-// let modelClose = document.querySelector(".modal-close");
-
-// modalBtn.addEventListener("click", function () {
-//   modalBg.classList.add("bg-active");
-// });
-// modelClose.addEventListener("click", function () {
-//   modalBg.classList.remove("bg-active");
-// });
-
-// /******  CHEKING IF EVENTLISTENER WORKS *********/
-// let clicked = document.querySelector("#library").addEventListener("click", function () {
-//   console.log("clicked");
-// });
-
-// let element1 = document.querySelectorAll(".movie");
-// element1.forEach((el) => {
-//   function1(el);
-// });
-
-// function function1(el) {
-//   document.querySelector("#modal").classList.toggle("modal-hidden");
-// }
