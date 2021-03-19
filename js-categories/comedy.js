@@ -84,7 +84,7 @@ function showMovies(movies) {
                 <div class="${getClassByRate(vote_average)}">${vote_average}</div>
             </div>
             <div class="overview">
-            <img src="/categories pictures/stars/star${star_number}.svg">
+            <img src="stars/star${star_number}.svg">
         </div>
             </div>
         `;
