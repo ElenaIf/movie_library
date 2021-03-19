@@ -27,17 +27,23 @@
   <body>
     <header>
       <div class="back-to-menu">
-        <a href="index.html"> Back to menu</a>
+        <p>
+          <a href="index.html"><i class="far fa-arrow-alt-circle-left"></i> Back to menu</a>
+        </p>
       </div>
       <div class="logo-name">
         <h1 class="logo"><a href="index.html">Movie</a></h1>
         <p class="logobottom"><a href="index.html">LIBRARY</a></p>
       </div>
 
-      <div class="movie-search">
-        <input type="text" id="search" />
-        <a href="/search.html" id="searchButton"><i class="fas fa-search">Search</i></a>
-      </div>
+      <form class="movie-search">
+        <div class="input">
+          <input type="text" id="search" />
+        </div>
+        <div class="button">
+          <a href="/search.html" id="searchButton"><i class="fas fa-search"></i> Search</a>
+        </div>
+      </form>
     </header>
     <section id="hero-banner" class="banner-search">
       <div><h1>COMEDY</h1></div>
@@ -45,6 +51,7 @@
     <main>
       <div id="library"></div>
     </main>
+    <div class="modal" id="modal"></div>
     <footer>
       <p>Movie Library Project © Copyright 2021</p>
       <p>Participants: Aryal Sagar, Haavisto Heli, Ivankina Elena, Ubozhenko Iolanta</p>

@@ -39,6 +39,10 @@
   background: url("categories pictures/cropped fantasy.jpg") no-repeat fixed center center/cover;
 }
 
+.banner-search {
+  background: url("categories pictures/search.jpg") no-repeat fixed center center/cover;
+}
+
 #library {
   display: flex;
   flex-wrap: wrap;
@@ -63,48 +67,80 @@
 .movie-info {
   color: #eee;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem 1rem;
+  justify-content: center;
+  padding: 0.5rem 0.5rem;
   letter-spacing: 0.5px;
+  min-height: 6.6rem;
+  cursor: default;
+  width: 100%;
 }
 
 .movie-info h3 {
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  text-align: center;
+  cursor: default;
+  flex: 10;
 }
 
-.movie-info span {
+.movie-info div {
   background-color: #202020;
   border-radius: 3px;
   font-weight: bold;
   padding: 0.25rem 0.5rem;
+  cursor: default;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  justify-self: flex-end;
+  text-align: center;
+  flex: 1;
 }
-.movie-info span.green {
+/* .movie-info div.green {
   color: rgb(39, 189, 39);
 }
 
-.movie-info span.orange {
+.movie-info div.orange {
   color: orange;
 }
 
-.movie-info span.red {
+.movie-info div.red {
   color: rgb(189, 42, 42);
+  justify-self: flex-end;
+  text-align: right;
+} */
+
+.green {
+  color: rgb(39, 189, 39);
+}
+
+.orange {
+  color: orange;
+  justify-self: flex-end;
+  text-align: right;
+}
+
+.red {
+  color: rgb(189, 42, 42);
+  justify-self: flex-end;
+  text-align: right;
 }
 
 .overview {
-  color: black;
+  content: "OOOOOOO";
+  color: white;
   font-family: "Montserrat", sans-serif;
-  background-color: rgb(233, 227, 227);
-  padding: 0.8rem;
+  font-size: 0.8rem;
+  background-color: black;
+  padding: 0 0.5rem;
   position: absolute;
-  max-height: 100%;
+  max-height: 1.8rem;
   overflow: auto;
   left: 0;
   bottom: 0;
   right: 0;
   transform: translateY(101%);
   transition: transform 0.3s ease-in;
+  cursor: default;
 }
 
 .overview h3 {
