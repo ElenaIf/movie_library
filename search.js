@@ -11,8 +11,6 @@ function searchMovie(event) {
 
   let search = document.getElementById("search").value;
 
-  console.log(search);
-
   const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${search}`;
 
   const imgPath = "https://image.tmdb.org/t/p/w1280";
@@ -30,8 +28,6 @@ function searchMovie(event) {
   async function getMovies() {
     const resp = await fetch(url);
     const data = await resp.json();
-
-    console.log(data);
 
     showMovies(data.results);
   }
