@@ -22,3 +22,9 @@ The website is a movie library. On the landing page a user can choose the catego
 - Haavisto Heli
 - Ivankina Elena
 - Ubozhenko Iolanta
+
+## Media
+
+![Landing page](presentation/landing_page.png)
+
+![Comedy category page](presentation/comedy_page.png)
