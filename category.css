@@ -68,10 +68,11 @@
   color: #eee;
   display: flex;
   justify-content: center;
-  padding: 0.5rem 1rem 1rem;
+  padding: 0.5rem 0.5rem;
   letter-spacing: 0.5px;
   min-height: 6.6rem;
   cursor: default;
+  width: 100%;
 }
 
 .movie-info h3 {
@@ -79,26 +80,34 @@
   font-family: "Montserrat", sans-serif;
   text-align: center;
   cursor: default;
+  flex: 10;
 }
 
-.movie-info span {
+.movie-info div {
   background-color: #202020;
   border-radius: 3px;
   font-weight: bold;
   padding: 0.25rem 0.5rem;
   cursor: default;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  justify-self: flex-end;
+  text-align: center;
+  flex: 1;
 }
-.movie-info span.green {
+/* .movie-info div.green {
   color: rgb(39, 189, 39);
 }
 
-.movie-info span.orange {
+.movie-info div.orange {
   color: orange;
 }
 
-.movie-info span.red {
+.movie-info div.red {
   color: rgb(189, 42, 42);
-}
+  justify-self: flex-end;
+  text-align: right;
+} */
 
 .green {
   color: rgb(39, 189, 39);
@@ -106,10 +115,14 @@
 
 .orange {
   color: orange;
+  justify-self: flex-end;
+  text-align: right;
 }
 
 .red {
   color: rgb(189, 42, 42);
+  justify-self: flex-end;
+  text-align: right;
 }
 
 .overview {

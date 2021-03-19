@@ -41,7 +41,7 @@ function showMovies(movies) {
     numberOfStars();
 
     let star_number;
-    let vote_average_floored = Math.round(vote_average);
+    let vote_average_floored = Math.floor(vote_average);
 
     switch (vote_average_floored) {
       case 1:
@@ -89,6 +89,7 @@ function showMovies(movies) {
             />
             <div class="movie-info">
                 <h3>${title}</h3>
+                <div class="${getClassByRate(vote_average)}">${vote_average}</div>
             </div>
             <div class="overview">
             <img src="/categories pictures/stars/star${star_number}.svg">
